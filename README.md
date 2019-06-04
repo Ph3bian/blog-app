@@ -1,4 +1,4 @@
-# router-demo
+# Blog App (Vue)
 
 ## Project setup
 ```
