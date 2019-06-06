@@ -45,7 +45,14 @@
 </template>
 <script>
 import axios from "axios";
+import config from "@/config.js";
 export default {
+  beforeRouteEnter(to, from, next) {
+    if (localStorage.getItem("auth")) {
+      return next({ path: "/" });
+    }
+    next();
+  },
   data() {
     return {
       email: "",
@@ -59,7 +66,7 @@ export default {
     login() {
       this.loading = true;
       axios
-        .post("https://react-blog-api.bahdcasts.com/api/auth/login", {
+        .post(`${config.baseUrl}/auth/login`, {
           email: this.email,
           password: this.password
         })
@@ -70,7 +77,7 @@ export default {
           localStorage.setItem("auth", JSON.stringify(data));
           this.$root.auth = data;
           this.$noty.success("Login Successful");
-          this.$router.push("/home");
+          this.$router.push("/");
         })
         .catch(({ response }) => {
           this.loading = false;

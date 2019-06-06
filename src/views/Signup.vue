@@ -57,7 +57,14 @@
 </template>
 <script>
 import axios from "axios";
+import config from "@/config.js";
 export default {
+  beforeRouteEnter(to, from, next) {
+    if (localStorage.getItem("auth")) {
+      return next({ path: "/" });
+    }
+    next();
+  },
   data() {
     return {
       name: "",
@@ -72,7 +79,7 @@ export default {
     registerUser() {
       this.loading = true;
       axios
-        .post("https://react-blog-api.bahdcasts.com/api/auth/register", {
+        .post(`${config.baseUrl}/auth/register`, {
           name: this.name,
           email: this.email,
           password: this.password

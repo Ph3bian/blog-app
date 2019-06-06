@@ -30,4 +30,14 @@ export default {
 body {
   background-color: #f5f3f8;
 }
+.noty_type__success{
+    color: #fff;
+    font-weight:bold !important;
+    background-color: #28a745 !important;
+    border-color: #28a745!important;
+}
+.noty_type__error{
+  font-weight:bold!important;
+}
+
 </style>
