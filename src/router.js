@@ -17,7 +17,7 @@ const router = new Router({
     { path: '/', component: Home },
     { path: '/article/:id', component: Article },
     { path: '/articles/create', component: Create },
-    { path: '*', component: Home },
+    { path: '*', component: Login },
   ],
 
 });
