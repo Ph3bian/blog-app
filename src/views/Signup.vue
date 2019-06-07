@@ -45,7 +45,7 @@
               <button @click="registerUser()" :disabled="loading" class="btn btn-success btn-block">
                 <span v-if="!loading">Signup</span>
                 <span v-else>
-                  <i class="fas fa-spin fa-spinner"></i>
+                  Loading...
                 </span>
               </button>
             </div>

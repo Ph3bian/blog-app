@@ -7,13 +7,14 @@
     <vue-disqus shortname="com-blog" :identifier="article.slug" :url="`${url}`"></vue-disqus>
     </div>
   </div>
-  <div class="loader text-center" v-else>
-     <i class="fas fa-5x fa-spin fa-spinner"></i>
+  <div v-else class="d-flex justify-content-center">
+     <Loader class="align-items-center"/>
   </div>
 </template>
 <script>
 import axios from "axios";
 import config from "@/config.js";
+import Loader from '@/components/Loader.vue';
 
 export default {
   beforeRouteEnter(to, from, next) {
@@ -33,6 +34,10 @@ export default {
       url:"window.location.href"
     };
   },
+  components:{
+    Loader
+  },
+
   methods: {
     getArticle() {
       

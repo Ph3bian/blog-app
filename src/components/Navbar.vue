@@ -25,7 +25,7 @@
             <router-link class="nav-link" to="signup">Signup</router-link>
           </li>
           <li class="nav-item" v-if="authUser">
-            <router-link class="nav-link" to="articles/create">Create Article</router-link>
+            <router-link class="nav-link" to="/articles/create">Create Article</router-link>
           </li>
           <li class="nav-item dropdown" v-if="authUser">
             <a
@@ -41,10 +41,10 @@
               {{authUser.name}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Settings</a>
+  
               <a class="dropdown-item" @click="logOut">Logout</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+            
+           
             </div>
           </li>
         </ul>

@@ -30,7 +30,7 @@
       </nav>
     </div>
 </div>
-    <div v-else class="d-flex justify-content-center ">
+    <div v-else class="d-flex justify-content-center">
       <Loader class="align-items-center"></Loader>
     </div>
   </div>
