@@ -5,7 +5,7 @@ Bloggy is built with Vue, create your blogpost and view post from others.
 
 ## Project Description (User Stories)
 
-- User can view a all blog post
+- User can view all blog post
 - User can see full details of single article and comment
 - User can create blog post
 
