@@ -9,13 +9,17 @@ Vue.use(Router);
 
 const router = new Router({
   mode: 'history',
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'active',
   routes: [
     { path: '/login', component: Login },
     { path: '/signup', component: Signup },
     { path: '/', component: Home },
     { path: '/article/:id', component: Article },
     { path: '/articles/create', component: Create },
-  ]
+    { path: '*', component: Home },
+  ],
+
 });
 
 export default router;

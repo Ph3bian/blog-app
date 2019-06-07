@@ -17,7 +17,7 @@
             >Previous</a>
           </li>
           <li class="page-item">
-            <a class="page-link">{{articles.current_page}} of {{articles.last_page}}</a>
+            <a class="page-link"> Page {{articles.current_page}} of {{articles.last_page}}</a>
           </li>
           <li class="page-item">
             <a

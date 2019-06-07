@@ -72,8 +72,9 @@ export default {
       this.image = image;
     },
     createArticle() {
-      if(!this.title || !this.image || !this.cntent|| !this.category){
-        this.$noty.error("Please fill in all fields")
+      if(!this.title || !this.image || !this.content|| !this.category){
+        this.$noty.error("Please fill in all fields");
+        return;
       }
       this.loading= true
       const form = new FormData();
@@ -84,7 +85,6 @@ export default {
       axios
         .post(process.env.VUE_APP_CLOUNDINARY_URL, form)
         .then(({ data }) => {
-          console.log(data, "here")
           axios
             .post(this.url, {
               title: this.title,
@@ -101,13 +101,12 @@ export default {
               this.$noty.success("Article created successfully");
               this.$router.push("/")
             })
-            .catch(({response})=> {
+            .catch(()=> {
               this.loading= false;
-              console.log(response, "0000000hrrrrrr")
                this.$noty.error("Oops, something went wrong");
             });
         })
-        .catch((response) => {
+        .catch(() => {
            this.loading= false;
           this.$noty.error("Oops, something went wrong");
         });
