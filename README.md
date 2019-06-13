@@ -5,14 +5,14 @@ Bloggy is built with Vue, create your blogpost and view post from others.
 
 ## Project Description (User Stories)
 
-- User can view a all blog post
+- User can view all blog posts
 - User can see full details of single article and comment
-- User can create blog post
+- User can create new blog post
 
 
 ## Hosted Url
 
-Visit [Bloggy App](https://goofy-shirley-081328.netlify.com/).
+Visit [Bloggy App](https://bloggy-app.netlify.com).
 
 ## Project setup
 ```
