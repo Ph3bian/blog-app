@@ -12,7 +12,7 @@ Bloggy is built with Vue, create your blogpost and view post from others.
 
 ## Hosted Url
 
-Visit [Bloggy App](https://bloggy-app.netlify.com).
+Visit [Bloggy App](https://bloggy-vue.herokuapp.com).
 
 ## Project setup
 ```
